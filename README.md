@@ -15,7 +15,7 @@ MedTech Vision is a Python-based project that constructs an equal-weighted index
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/YourUsername/MedTech-Vision.git
+   git clone https://github.com/rishavsofer/MedTech-Vision.git
    cd MedTech-Vision
    ```
 2. **Set up a virtual environment** (optional, but recommended):
