@@ -36,13 +36,13 @@ MedTech Vision is a Python-based project that constructs an equal-weighted index
 
 4. **Run the script**:
    ```bash
-   python "MedTech Vision.py"
+   python "MedTech_Vision.py"
    ```
    This script will download the data, build the index, backtest it, and generate a 90-day forecast.
 
 ## Usage
 
-- **Adjust Tickers**: Open `MedTech Vision.py` and edit the `tickers` list to include/exclude specific stocks.
+- **Adjust Tickers**: Open `MedTech_Vision.py` and edit the `tickers` list to include/exclude specific stocks.
 - **Modify Forecast Period**: Update the Prophet `make_future_dataframe(periods=90)` line to forecast more or fewer days.
 - **Customize Parameters**: You can fine-tune Prophet hyperparameters or modify index construction logic within the script.
 
