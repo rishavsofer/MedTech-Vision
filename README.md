@@ -1,4 +1,4 @@
-```markdown
+
 # MedTech Vision
 
 MedTech Vision is a Python-based project that constructs an equal-weighted index from five major MedTech stocks—MDT, JNJ, SMMNY, SYK, and GEHC—then backtests the index’s historical performance and forecasts 90-day trends using Prophet.
@@ -23,54 +23,38 @@ MedTech Vision is a Python-based project that constructs an equal-weighted index
    python -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
-3. **Install dependencies**:
+3. **Install dependencies manually**:
+   Run the following commands to install the required Python libraries:
    ```bash
-   pip install -r requirements.txt
+   pip install yfinance
+   pip install pandas
+   pip install numpy
+   pip install matplotlib
+   pip install prophet
    ```
-4. **Run the main script**:
+   These libraries are required for data handling, analysis, visualization, and forecasting.
+
+4. **Run the script**:
    ```bash
-   python main.py
+   python "MedTech Vision.py"
    ```
    This script will download the data, build the index, backtest it, and generate a 90-day forecast.
 
-## Project Structure
-
-```plaintext
-MedTech-Vision/
-│
-├── main.py               # Main workflow script
-├── requirements.txt      # Project dependencies
-├── README.md             # Project documentation
-└── src/
-    ├── data_retrieval.py # Functions to fetch price data
-    ├── index_builder.py  # Logic to build the equal-weighted index
-    ├── backtest.py       # Backtest metrics and plotting
-    ├── forecast.py       # Prophet model training and forecast
-    └── plots.py          # Visualization utilities
-```
-
 ## Usage
 
-- **Adjust Tickers**: In `main.py` (or within `src/index_builder.py`), edit the `tickers` list to include/exclude specific stocks.
-- **Modify Forecast Period**: In `src/forecast.py`, change `periods=90` to forecast more or fewer days.
-- **Hyperparameter Tuning**: Fine-tune the Prophet model (e.g., `seasonality_mode`, `changepoint_prior_scale`) or experiment with other libraries like ARIMA, LSTM, or XGBoost.
+- **Adjust Tickers**: Open `MedTech Vision.py` and edit the `tickers` list to include/exclude specific stocks.
+- **Modify Forecast Period**: Update the Prophet `make_future_dataframe(periods=90)` line to forecast more or fewer days.
+- **Customize Parameters**: You can fine-tune Prophet hyperparameters or modify index construction logic within the script.
 
 ## Results and Interpretation
 
-- The script prints key backtest metrics (annualized return, volatility) to the console.
-- Prophet plots (trend, seasonality) are displayed automatically.
-- Use these insights to compare MedTech’s performance with other benchmarks or for deeper strategic decisions.
+- The script generates key metrics like total return, annualized return, and volatility.
+- Prophet's trend and seasonality plots are displayed automatically.
+- Use these insights to explore the MedTech sector's performance and make data-driven predictions.
 
 ## Contributing
 
-Contributions are welcome!  
-- Fork the repo  
-- Create a new branch (`git checkout -b feature/YourFeature`)  
-- Commit changes (`git commit -am 'Add a cool feature'`)  
-- Push to the branch (`git push origin feature/YourFeature`)  
-- Open a Pull Request  
-
-Please open an issue if you have any questions or ideas.
+Contributions are welcome! Fork the repository, make your changes, and submit a pull request.
 
 ## License
 
@@ -81,8 +65,3 @@ This project is provided under the [MIT License](LICENSE). Feel free to use, sha
 - **Email**: [rishavlincoln@gmail.com](mailto:rishavlincoln@gmail.com)
 
 Happy forecasting!
-```
-
-
-
-
